@@ -1,8 +1,6 @@
 const APIKEY = 'b500db65e6fec80384d3983b5d3635ee';
 
-// let url = `https://api.openweathermap.org/data/2.5/weather?q=Montreuil&appid=${APIKEY}&units=metric&lang=fr`;
-
-
+// Appel a l'API openWeather avec ville en parm de fontion
 let apiCall = function(city) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
 
@@ -20,10 +18,13 @@ let apiCall = function(city) {
     .catch(err => console.log('Erreur : ' + err));
 }
 
+// Ecouteur d'evenement sur la soumission du formulaire
 document.querySelector('#formId').addEventListener('submit', function(e) {
     e.preventDefault();
     let ville = document.querySelector('#inputCity').value;
     apiCall(ville);
 });
 
+// Appel par défaut au chargement de la page 
+apiCall('Montreuil');
 
