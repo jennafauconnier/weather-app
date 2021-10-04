@@ -24,10 +24,28 @@
          referrerpolicy="no-referrer" 
         />
 
-        <link rel="stylesheet" href="style.css">
+        <!-- Set the font -->
+
+        <link 
+         rel="preconnect" 
+         href="https://fonts.googleapis.com"
+        />
+
+        <link 
+         rel="preconnect" 
+         href="https://fonts.gstatic.com" 
+         crossorigin
+        />
+
+        <link 
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" 
+         rel="stylesheet"
+        />
+
+         <link rel="stylesheet" href="./style.css"/>
 
         <!-- Call JS file -->
-        <script src="index.js"></script>
+        
 
         <title>Weather app</title>
   </head>
@@ -35,7 +53,7 @@
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-12 col-sm-6 my-3">
-                  <form>
+                  <form id="formId">
                       <div class="form-group">
                           <input type="text" class="form-control" id="inputCity" />
                       </div>
@@ -56,5 +74,6 @@
               </div>
           </div>
       </div>
+      <script src="./index.js"></script>
   </body>
 </html>
